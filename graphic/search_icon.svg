@@ -1,0 +1,14 @@
+<svg id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" width="756.41" height="761.91" viewBox="0 0 756.41 761.91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #303030;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>search-icon</title>
+  <path class="cls-1" d="M525.5,24C381.08,24,264,141.08,264,285.5a260.27,260.27,0,0,0,53.73,158.77L33,729l54.5,54.5L373,498A260.24,260.24,0,0,0,525.5,547C669.92,547,787,429.92,787,285.5S669.92,24,525.5,24Zm0,441.07A179.57,179.57,0,1,1,705.07,285.5,179.57,179.57,0,0,1,525.5,465.07Z" transform="translate(-31.59 -23)"/>
+</svg>

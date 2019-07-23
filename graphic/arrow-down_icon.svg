@@ -1,0 +1,14 @@
+<svg id="Livello_1" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" width="617" height="172.97" viewBox="0 0 617 172.97">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #303030;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>arrow-down_icon</title>
+  <polygon class="cls-1" points="1 1.41 1 64.41 308.5 171.91 616 64.41 616 1.41 308.5 108.91 1 1.41"/>
+</svg>
