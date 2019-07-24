@@ -32,7 +32,7 @@
 
 #container {
     display: grid;
-    grid-template: 1fr 1fr 2fr / repeat(3, 1fr);
+    grid-template: 150px 100px 2fr / repeat(3, 1fr);
 
     width: 100%;
     height: calc(100vh - 110px);
@@ -97,6 +97,12 @@
             display: grid;
             grid-template: 1fr / repeat(3, 1fr);
 
+            max-height: 0;
+            
+            overflow: hidden;
+
+            transition: max-height .4s linear;
+
             [id^="bookmarks-group"] {
                 margin: 0 auto;
                 text-align: center;
@@ -138,10 +144,24 @@
         #bookmarks-arrow {
             text-align: center;
 
+            transition: transform .4s linear;
+            
             img {
                 width: 50px;
 
                 margin-top: 10px;
+            }
+        }
+
+        &.activated {
+
+            #bookmarks-group {
+                height: auto;
+                max-height: 40%;
+            }
+
+            #bookmarks-arrow {
+                transform: rotate(180deg);             
             }
         }
 
