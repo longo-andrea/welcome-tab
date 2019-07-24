@@ -1,2 +1,5 @@
 graphic/*.ai
 graphic/welcome-tab_mockup.png
+
+src/.vscode
+src/styles/style.css.map
