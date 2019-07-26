@@ -27,9 +27,9 @@
 
     <main id="container">
         <div id="date">
-            <span id="week-day">Wednesday</span>
-            <span id="d-m-y">24/07/2019</span>
-            <span id="hour">15:03:24</span>
+            <span id="week-day"></span>
+            <span id="d-m-y"></span>
+            <span id="hour"></span>
         </div>
 
         <div id="search">
@@ -61,7 +61,40 @@
         </div>
     </main>
 
+    <aside id="settings" class="activated">
 
+        <section id="settings_naviagation">
+            <button class="activated">Preferences</button>
+            <button>Color & Style</button>
+            <button>About</button>
+        </section>
+
+        <section id="settings_content">
+            <div id="preferences" class="activated">
+                <p>Here you can edit you preferences about clock and date</p>
+                <hr>
+                <div id="preferences-seconds">
+                    <span>Seconds</span>
+                    <input type="checkbox" checked>
+                </div>
+                <div id="preferences-hour-separator">
+                        <span>Separator</span>
+                        <input type="text" value=":">
+                    </div>
+
+
+            </div>
+            <div id="color-style">
+                sasdasdsas
+            </div>
+            <div id="about">
+                sas
+            </div>
+        </section>
+
+    </aside>
+    
+    <script src="scripts/function.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
