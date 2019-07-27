@@ -29,11 +29,15 @@
         <div id="date">
             <span id="week-day"></span>
             <span id="d-m-y"></span>
-            <span id="hour"></span>
+            <span id="hour">
+                <span id="h"></span>
+                <span id="m"></span>
+                <span id="s"></span>
+            </span>
         </div>
 
         <div id="search">
-            <input type="text" id="search-bar">
+            <input type="search" id="search-bar">
         </div>
 
         <div id="bookmarks">
@@ -63,36 +67,68 @@
 
     <aside id="settings" class="activated">
 
-        <section id="settings_naviagation">
-            <button class="activated">Preferences</button>
-            <button>Color & Style</button>
-            <button>About</button>
+        <section id="settings_navigation">
+            <button class="activated" data-i18n="preferences"></button>
+            <button data-i18n="colorstyle"></button>
+            <button data-i18n="about"></button>
         </section>
 
         <section id="settings_content">
             <div id="preferences" class="activated">
-                <p>Here you can edit you preferences about clock and date</p>
+                <p data-i18n="day"></p>
+                <div id="preferences-day">
+                    <span data-i18n="day"></span>
+                    <input type="checkbox">
+                </div>
+
                 <hr>
+
+                <p data-i18n="date"></p>
+                <div id="preferences-date">
+                    <span data-i18n="date"></span>
+                    <input type="checkbox">
+                </div>
+                <div id="preferences-date-separator">
+                    <span data-i18n="separator"></span>
+                    <input type="text" maxlength='1'>
+                </div>
+
+                <hr>
+
+                <p data-i18n="clock"></p>
+                <div id="preferences-clock">
+                    <span data-i18n="clock"></span>
+                    <input type="checkbox" checked>
+                </div>
                 <div id="preferences-seconds">
-                    <span>Seconds</span>
+                    <span data-i18n="seconds"></span>
                     <input type="checkbox" checked>
                 </div>
                 <div id="preferences-hour-separator">
-                        <span>Separator</span>
-                        <input type="text" value=":">
-                    </div>
+                    <span data-i18n="separator"></span>
+                    <input type="text" maxlength='1'>
+                </div>
 
+                <hr>
+
+                <p data-i18n="bookmarks"></p>
+                <div id="preferences-bookmarks-on">
+                    <span data-i18n="bookmarks_always"></span>
+                    <input type="checkbox">
+                </div>
 
             </div>
             <div id="color-style">
                 sasdasdsas
             </div>
             <div id="about">
-                sas
+                Hi
             </div>
         </section>
 
     </aside>
+
+
     
     <script src="scripts/function.js"></script>
     <script src="scripts/script.js"></script>

@@ -1,0 +1,114 @@
+{
+    "appName" : {
+        "message" : "Welcome Tab"
+    },
+    "appDescription" : {
+        "message" : "Welcome Tab is a lightweight Google Chrome Hompage."   
+    },
+
+    
+
+    "preferences" :  {
+        "message" : "Preferences"
+    },
+    "colorstyle" :  {
+        "message" : "Color & Style"
+    },
+    "about" :  {
+      "message" : "About"
+    },
+
+
+    "day" :  {
+      "message" : "Day"
+    },
+    "date" :  {
+      "message" : "Date"
+    },
+    "separator" :  {
+      "message" : "Separator"
+    },
+    "clock" :  {
+      "message" : "Clock"
+    },
+    "seconds" :  {
+      "message" : "Seconds"
+    },
+    "bookmarks" :  {
+      "message" : "Bookmarks"
+    },
+    "bookmarks_always" :  {
+      "message" : "Always Open"
+    },
+    
+
+
+    "monday": {
+        "message": "Monday"
+      },
+      "tuesday": {
+        "message": "Tuesday"
+      },
+      "wednesday": {
+        "message": "Wednesday"
+      },
+      "thursday": {
+        "message": "Thursday"
+      },
+      "friday": {
+        "message": "Friday"
+      },
+      "saturday": {
+        "message": "Saturday"
+      },
+      "sunday": {
+        "message": "Sunday"
+      }, 
+  
+      "yesterday" : {
+          "message" : "Yesterday"
+      },
+      "tomorrow" : {
+          "message" : "Tomorrow"
+      },
+  
+      "january": {
+        "message": "January"
+      },
+      "february": {
+        "message": "February"
+      },
+      "march": {
+        "message": "March"
+      },
+      "april": {
+        "message": "April"
+      },
+      "may": {
+        "message": "May"
+      },
+      "june": {
+        "message": "June"
+      },
+      "july": {
+        "message": "July"
+      },
+      "august": {
+        "message": "August"
+      },
+      "september": {
+        "message": "September"
+      },
+      "october": {
+        "message": "October"
+      },
+      "november": {
+        "message": "November"
+      },
+      "december": {
+        "message": "December"
+      }
+  
+
+
+}
