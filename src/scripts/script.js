@@ -1,65 +1,37 @@
 (function() {
     'use strict';
-
+    
     /* ---------------------
     --------- INIT ---------
     ---------------------- */
 
     // Set the correct locales
-    let objects = document.getElementsByTagName('*');
-    for(let i = 0; i < objects.length; i++) {
-        if (objects[i].dataset && objects[i].dataset.i18n) {
-            objects[i].innerHTML = chrome.i18n.getMessage(objects[i].dataset.i18n);
+    let elements = document.getElementsByTagName('*');
+    for(let i = 0; i < elements.length; i++) {
+        if (elements[i].dataset && elements[i].dataset.i18n) {
+            elements[i].innerHTML = chrome.i18n.getMessage(elements[i].dataset.i18n);
         }
     }
 
-    // Set the correct Preferences
-    chrome.storage.sync.get("weekday", function(items){
-        if(items.weekday == 'off') 
-            toggleWeekDay(false);
-        else
-            toggleWeekDay(true);
-    });
+    let dmySeparator = window.localStorage.getItem('dateSeparator');
+    if(dmySeparator == null)
+        dmySeparator = '/';
+    document.querySelector("#preferences-date-separator > input").value = dmySeparator;
 
-    chrome.storage.sync.get("date", function(items){
-        if(items.date == 'off') 
-            toggleDate(false);
-        else
-            toggleDate(true);
-    });
+    let hourSeparator = window.localStorage.getItem('hourSeparator');
+    if(hourSeparator == null)
+        hourSeparator = ' : ';
+    document.querySelector("#preferences-hour-separator > input").value = hourSeparator;
+    
+    toggleWeekDay(window.localStorage.getItem('weekday') == 'on');
+    
+    toggleDate(window.localStorage.getItem('date') == 'on');
+    
+    toggleClock(window.localStorage.getItem('clock') == 'on');
+    
+    toggleSeconds(window.localStorage.getItem('seconds') == 'on');
 
-    let dmySeparator = '/';
-    chrome.storage.sync.get("dateSeparator", function(items){
-        dmySeparator = items.dateSeparator;
-        document.querySelector("#preferences-date-separator > input").value = dmySeparator;
-    });
 
-    let hourSeparator = ': ';
-    chrome.storage.sync.get("hourSeparator", function(items){
-        hourSeparator = items.hourSeparator;
-        document.querySelector("#preferences-hour-separator > input").value = hourSeparator;
-    });
-
-    chrome.storage.sync.get("clock", function(items){
-        if(items.clock == 'off') 
-            toggleClock(false);
-        else
-            toggleClock(true);
-    });
-
-    chrome.storage.sync.get("seconds", function(items){
-        if(items.seconds == 'off') 
-            toggleSeconds(false);
-        else
-            toggleSeconds(true);
-    });
-
-    chrome.storage.sync.get("bookmarksAlwaysOn", function(items){
-        if(items.bookmarksAlwaysOn == 'on') 
-            toggleBookmarks(true);
-        else
-            toggleBookmarks(false);
-    });
 
     /* ---------------------
     --------- DATE ---------
@@ -111,7 +83,7 @@
         });
     }
 
-    // Day settings
+    // Day toggle settings
     document.querySelector("#preferences-day > input").addEventListener('change', function(e) {
         if(e.target.checked)
             toggleWeekDay(true);
@@ -119,7 +91,7 @@
             toggleWeekDay(false);
     });
 
-    // Date settings
+    // Date toggle settings
     document.querySelector("#preferences-date > input").addEventListener('change', function(e) {
         if(e.target.checked)
             toggleDate(true);
@@ -129,10 +101,10 @@
 
     document.querySelector("#preferences-date-separator > input").addEventListener('change', function(e){
         dmySeparator = e.target.value;
-        chrome.storage.sync.set({ "dateSeparator" : dmySeparator });
+        window.localStorage.setItem("dateSeparator", dmySeparator);
     });
 
-    // Clock settings
+    // Clock toggles settings
     document.querySelector("#preferences-clock > input").addEventListener('change', function(e) {
         if(e.target.checked)
             toggleClock(true);
@@ -149,24 +121,7 @@
 
     document.querySelector("#preferences-hour-separator").addEventListener('change', function(e){
         hourSeparator = e.target.value;
-        chrome.storage.sync.set({ "hourSeparator" : hourSeparator });
-    });
-
-    // Bookmarks settings
-    document.querySelector("#preferences-bookmarks-on > input").addEventListener('change', function(e) {
-        if(e.target.checked)
-            toggleBookmarks(true)
-        else
-            toggleBookmarks(false)
-    });
-
-    /* ---------------------
-    ------- BOOKMARKS ------
-    --------------------- -*/
-
-    // BOOKMARKS ARROW DOWN CLICK
-    document.querySelector("#bookmarks-arrow").children[0].addEventListener('click', function(e){
-        document.querySelector("#bookmarks").classList.toggle("activated");
+        window.localStorage.setItem("hourSeparator", hourSeparator);
     });
 
 })()  

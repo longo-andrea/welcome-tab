@@ -37,65 +37,43 @@
         </div>
 
         <div id="search">
-            <input type="search" id="search-bar">
-        </div>
-
-        <div id="bookmarks">
-            <div id="bookmarks-group">
-                <div id="bookmarks-group-1">
-                    <a href="#">Bookmark 1</a>
-                    <a href="#">Bookmark 2</a>
-                    <a href="#">Bookmark 3</a>
-                    <a href="#">Bookmark 4</a>
-                </div>
-                <div id="bookmarks-group-2">
-                    <a href="#">Bookmark 1</a>
-                    <a href="#">Bookmark 2</a>
-                    <a href="#">Bookmark 3</a>
-                    <a href="#">Bookmark 4</a>
-                </div>
-                <div id="bookmarks-group-3">
-                    <a href="#">Bookmark 1</a>
-                    <a href="#">Bookmark 2</a>
-                    <a href="#">Bookmark 3</a>
-                    <a href="#">Bookmark 4</a>
-                </div>
-            </div>
-            <div id="bookmarks-arrow"><img src="images/arrow-down_icon.svg" alt="arrow down"></div>
+            <input type="search" id="search-bar" placeholder="Search">
         </div>
     </main>
 
-    <aside id="settings" class="activated">
+    <aside id="settings">
 
         <section id="settings_navigation">
             <button class="activated" data-i18n="preferences"></button>
-            <button data-i18n="colorstyle"></button>
             <button data-i18n="about"></button>
         </section>
 
         <section id="settings_content">
             <div id="preferences" class="activated">
                 <p data-i18n="day"></p>
+                <p class="preferences-sub" data-i18n="day_sub"></p>
                 <div id="preferences-day">
                     <span data-i18n="day"></span>
-                    <input type="checkbox">
+                    <input type="checkbox" checked>
                 </div>
 
-                <hr>
+                <div id="row-separator"></div>
 
                 <p data-i18n="date"></p>
+                <p class="preferences-sub" data-i18n="date_sub"></p>
                 <div id="preferences-date">
                     <span data-i18n="date"></span>
-                    <input type="checkbox">
+                    <input type="checkbox" checked>
                 </div>
                 <div id="preferences-date-separator">
                     <span data-i18n="separator"></span>
                     <input type="text" maxlength='1'>
                 </div>
 
-                <hr>
+                <div id="row-separator"></div>
 
                 <p data-i18n="clock"></p>
+                <p class="preferences-sub" data-i18n="clock_sub"></p>
                 <div id="preferences-clock">
                     <span data-i18n="clock"></span>
                     <input type="checkbox" checked>
@@ -108,21 +86,10 @@
                     <span data-i18n="separator"></span>
                     <input type="text" maxlength='1'>
                 </div>
-
-                <hr>
-
-                <p data-i18n="bookmarks"></p>
-                <div id="preferences-bookmarks-on">
-                    <span data-i18n="bookmarks_always"></span>
-                    <input type="checkbox">
-                </div>
-
             </div>
-            <div id="color-style">
-                sasdasdsas
-            </div>
+
             <div id="about">
-                Hi
+                <p></p>
             </div>
         </section>
 

@@ -11,19 +11,20 @@
     "preferences" :  {
         "message" : "Preferences"
     },
-    "colorstyle" :  {
-        "message" : "Color & Style"
-    },
     "about" :  {
       "message" : "About"
     },
-
-
     "day" :  {
       "message" : "Day"
     },
+    "day_sub" : {
+      "message" : "You can toggle day on/off"
+    },
     "date" :  {
       "message" : "Date"
+    },
+    "date_sub" : {
+      "message" : "You can toggle date on/off and choose date separator"
     },
     "separator" :  {
       "message" : "Separator"
@@ -31,17 +32,12 @@
     "clock" :  {
       "message" : "Clock"
     },
+    "clock_sub" : {
+      "message" : "You can toggle clock or seconds indicator on/off, and choose clock separator"
+    },
     "seconds" :  {
       "message" : "Seconds"
     },
-    "bookmarks" :  {
-      "message" : "Bookmarks"
-    },
-    "bookmarks_always" :  {
-      "message" : "Always Open"
-    },
-    
-
 
     "monday": {
         "message": "Monday"

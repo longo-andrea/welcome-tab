@@ -39,16 +39,17 @@ function fixSecs(secs) {
         return secs;
 }
 
+
 function toggleWeekDay(target) {
     if(target == true) {
         document.querySelector("#preferences-day > input").checked = true;
         document.querySelector("#week-day").style.display = 'inline';
-        chrome.storage.sync.set({ "weekday" : "on" });
+        window.localStorage.setItem("weekday", "on");
     }
     else {
         document.querySelector("#preferences-day > input").checked = false;
         document.querySelector("#week-day").style.display = 'none';
-        chrome.storage.sync.set({ "weekday" : "off" });
+        window.localStorage.setItem("weekday", "off");
     }
 }
 
@@ -56,12 +57,12 @@ function toggleDate(target) {
     if(target == true) {
         document.querySelector("#preferences-date > input").checked = true;
         document.querySelector("#d-m-y").style.display = 'inline';
-        chrome.storage.sync.set({ "date" : "on" });
+        window.localStorage.setItem("date", "on");
     }
     else {
         document.querySelector("#preferences-date > input").checked = false;
         document.querySelector("#d-m-y").style.display = 'none';
-        chrome.storage.sync.set({ "date" : "off" });
+        window.localStorage.setItem("date", "off");
     }
 }
 
@@ -69,12 +70,12 @@ function toggleClock(target) {
     if(target == true) {
         document.querySelector("#preferences-clock > input").checked = true;
         document.querySelector("#hour").style.display = 'inline';
-        chrome.storage.sync.set({ "clock" : "on" });
+        window.localStorage.setItem("clock", "on");
     }
     else {
         document.querySelector("#preferences-clock > input").checked = false;
         document.querySelector("#hour").style.display = 'none';
-        chrome.storage.sync.set({ "clock" : "off" });
+        window.localStorage.setItem("clock", "off");
     }
 }
 
@@ -82,24 +83,11 @@ function toggleSeconds(target) {
     if(target == true) {
         document.querySelector("#preferences-seconds > input").checked = true;
         document.querySelector("#hour #s").style.display = 'inline';
-        chrome.storage.sync.set({ "seconds" : "on" });
+        window.localStorage.setItem("seconds", "on");
     }
     else {
         document.querySelector("#preferences-seconds > input").checked = false;
         document.querySelector("#hour #s").style.display = 'none';
-        chrome.storage.sync.set({ "seconds" : "off" });
-    }
-}
-
-function toggleBookmarks(target) {
-    if(target == true) {
-        document.querySelector("#bookmarks").classList.add('activated')
-        document.querySelector("#preferences-bookmarks-on > input").checked = true;
-        chrome.storage.sync.set({ "bookmarksAlwaysOn" : "on" });
-    }
-    else {
-        document.querySelector("#bookmarks").classList.remove('activated')
-        document.querySelector("#preferences-bookmarks-on > input").checked = false;
-        chrome.storage.sync.set({ "bookmarksAlwaysOn" : "off" });
+        window.localStorage.setItem("seconds", "off");
     }
 }
