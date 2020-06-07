@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack/webpack.config.js",
+    "dev": "webpack --watch --progress --config webpack/webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "uikit": "^3.5.3"
   }
 }

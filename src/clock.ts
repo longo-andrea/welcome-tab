@@ -2,7 +2,7 @@ export class Clock {
   private showSeconds: boolean;
 
   constructor() {
-    this.showSeconds = false;
+    this.showSeconds = true;
   }
 
   public getShowSeconds(): boolean {
@@ -22,15 +22,33 @@ export class Clock {
   }
 
   // private utilities
-  private getCurrentHours(): number {
-    return (new Date()).getHours();
+  private getCurrentHours(): string {
+    const currentHours = (new Date()).getHours();
+
+    if (currentHours < 10) {
+      return `0${currentHours}`;
+    } else {
+      return `${currentHours}`;
+    }
   }
 
-  private getCurrentMinutes(): number {
-    return (new Date()).getMinutes();
+  private getCurrentMinutes(): string {
+    const currentMinutes = (new Date()).getMinutes();
+
+    if (currentMinutes < 10) {
+      return `0${currentMinutes}`;
+    } else {
+      return `${currentMinutes}`;
+    }
 	}  
 	
-  private getCurrentSeconds(): number {
-    return (new Date()).getSeconds();
+  private getCurrentSeconds(): string {
+    const currentSeconds =  (new Date()).getSeconds();
+
+    if (currentSeconds < 10) {
+      return `0${currentSeconds}`;
+    } else {
+      return `${currentSeconds}`;
+    }
   }  	
 };

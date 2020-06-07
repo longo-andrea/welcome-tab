@@ -4,7 +4,7 @@ module.exports = {
   mode: "development",
   entry: [
     "./src/index.ts",
-    "./src/styles/style.scss"
+    "./src/styles/style.scss",
   ],
   module: {
     rules: [
@@ -34,6 +34,6 @@ module.exports = {
   },
   output: {
     filename: "index.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../dist"),
   },
 };

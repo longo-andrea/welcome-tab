@@ -4,17 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- UIkit CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- UIkit JS -->
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
 
+  <!-- Local script -->
+  <script src="index.js" defer></script>
+
   <title>Welcome Tab</title>
 </head>
 <body>
 
+  <a class="uk-align-right uk-margin-small-top uk-margin-small-right" id="settings-icon" href="#offcanvas-usage" uk-toggle>
+    <span class="uk-margin-small-right" uk-icon="icon: cog; ratio: 2"></span>
+  </a>
 
+  <div id="offcanvas-usage" uk-offcanvas="flip: true">
+    <div class="uk-offcanvas-bar">
+
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      
+      <ul class="uk-subnav uk-subnav-pill" uk-switcher>
+        <li class="uk-active"><a href="preferences-tab">Preferences</a></li>
+        <li><a href="appearance-tab">Appearance</a></li>
+      </ul>
+
+      <div class="uk-switcher uk-margin">
+        <div id="preferences-tab">
+          <h4>Clock</h4>
+          <input class="uk-checkbox" id="toggle-seconds" type="checkbox">
+          <label for="toggle-seconds" class="settings-title">Seconds</label>
+          <p class="settings-description">Whether to show seconds indicator</p>
+
+          <hr>
+
+          <h4>Search</h4>
+          <input class="uk-checkbox" id="toggle-search" type="checkbox">
+          <label for="toggle-search" class="settings-title">Search bar</label>
+          <p class="settings-description">Whether to show search bar</p>
+        </div>
+
+        <div id="appearance-tab">
+          <h4>Colors</h4>
+          <label for="toggle-background" class="settings-title">Background</label>
+          <p class="settings-description">Choose a background color</p>
+          <div class="background-samples">
+            <div class="background-sample background-sample-1" data-background="#303030" data-color="#ededed">A</div>
+            <div class="background-sample background-sample-2" data-background="#ea907a" data-color="#160E0E">A</div>
+            <div class="background-sample background-sample-3" data-background="#fbc687" data-color="#51321F">A</div>
+            <div class="background-sample background-sample-4" data-background="#f4f7c5" data-color="#414D2D">A</div>
+            <div class="background-sample background-sample-5" data-background="#aacdbe" data-color="#233934">A</div>
+            <div class="background-sample background-sample-6" data-background="#654062" data-color="#EFE8F7">A</div>
+            <div class="background-sample background-sample-7" data-background="#ff9c71" data-color="#322106">A</div>
+            <div class="background-sample background-sample-8" data-background="#fbd46d" data-color="#4D3300">A</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="uk-container" id="content">
+
+    <div>
+      <h1 class="uk-heading-large" id="hours"></h1>
+    </div>
+
+    <form class="uk-search uk-search-default uk-display-block" id="search-bar" method="GET" action="https://google.com/search">
+      <span uk-search-icon></span>
+      <input class="uk-search-input" name="q" type="search" value="">
+    </form>
+
+  </div>
+  
 </body>
 </html>

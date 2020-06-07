@@ -1,0 +1,10 @@
+// Import custom variables
+@import './variables.scss';
+
+// Import custom styles
+@import './custom.scss';
+
+// Import UIKit
+@import "uikit/src/scss/variables-theme.scss";
+@import "uikit/src/scss/mixins-theme.scss";
+@import "uikit/src/scss/uikit-theme.scss";
