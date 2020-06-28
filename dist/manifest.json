@@ -1,0 +1,20 @@
+  {
+    "name": "Welcome Tab",
+    "version": "0.1",
+    "description": "A simple and awesome welcome tab!",
+    "manifest_version": 2,
+    "page_action": {
+      "default_popup": "index.html"
+    },
+    "background": {
+      "scripts": ["index.js"],
+      "persistent": true
+    },
+    "permissions": [
+      "storage"
+    ],
+  	"chrome_url_overrides": {
+  	  "newtab": "index.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'; script-src-elem * https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js"
+  }

@@ -1,0 +1,7 @@
+  {
+    "name": "Welcome Tab",
+    "version": "0.1",
+    "description": "A simple and awesome welcome tab!",
+    "manifest_version": 2,
+    "permissions": ["storage"]
+  }

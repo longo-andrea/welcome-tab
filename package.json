@@ -29,6 +29,6 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "uikit": "^3.5.3"
+    "uikit": "^3.5.4"
   }
 }
