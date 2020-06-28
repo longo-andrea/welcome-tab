@@ -13,6 +13,12 @@ body {
   text-align: center;
 }
 
+#date {
+  font-size: 1.5rem;
+
+  text-align: center;
+}
+
 #search-bar {
   width: 30vw;
   margin: 0 auto;
@@ -38,7 +44,12 @@ body {
     padding: 0;
 
     cursor: pointer;
-  
+
+    &.background-defeault {
+      background: #666666;
+      color: #303030;
+    }
+
     &.background-sample-1 {
       background: #303030;
       color: #ededed;
@@ -81,6 +92,16 @@ body {
   }
 }
 
+.date-formats {
+  padding-left: 2rem;
+
+  cursor: pointer;
+
+  .date-format-active {
+    font-weight: 900;
+  }
+}
+
 .settings-title {
   margin-bottom: 0;
 
@@ -91,4 +112,34 @@ body {
   margin-top: 0;
 
   color: $settings-color-secondary;
+}
+
+#reset {
+  cursor: pointer;
+}
+
+#logo {
+  word-wrap: break-word;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    flex-basis: 30%;
+    padding: .5rem;
+    list-style-type: none;
+    text-align: center;
+
+    &:hover {
+      background: rgba(#ffffff, .5);
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
 }

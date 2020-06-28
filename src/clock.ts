@@ -1,12 +1,18 @@
 export class Clock {
   private showSeconds: boolean;
+  private dateFormat: string;
 
   constructor() {
     this.showSeconds = true;
+    this.dateFormat = "mm/dd/yyyy";
   }
 
   public getShowSeconds(): boolean {
     return this.showSeconds;
+  }
+
+  public getDateFormat(): string {
+    return this.dateFormat;
   }
 
   public getHour(): string {
@@ -16,9 +22,32 @@ export class Clock {
 
     return hours + minutes + seconds;
 	}
-	
+  
+  public getDate(): string {
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
+
+    const weekDay = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    if (this.dateFormat === "ddmmyyyy") {
+      return `${dd}/${mm}/${yyyy}`;
+    } else if (this.dateFormat === "string") {
+      return `${weekDay[today.getDay()]} ${dd}, ${month[today.getMonth()]} ${yyyy}`;
+    } else {
+      return `${mm}/${dd}/${yyyy}`;
+    }
+
+  }
+
   public setShowSeconds(showSeconds: boolean): void {
     this.showSeconds = showSeconds;
+  }
+
+  public setDateFormat(dateFormat: string): void {
+    this.dateFormat = dateFormat;
   }
 
   // private utilities
@@ -50,5 +79,5 @@ export class Clock {
     } else {
       return `${currentSeconds}`;
     }
-  }  	
+  }
 };

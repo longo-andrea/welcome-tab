@@ -29,7 +29,7 @@
       
       <ul class="uk-subnav uk-subnav-pill" uk-switcher>
         <li class="uk-active"><a href="preferences-tab">Preferences</a></li>
-        <li><a href="appearance-tab">Appearance</a></li>
+        <li><a href="about-tab">About</a></li>
       </ul>
 
       <div class="uk-switcher uk-margin">
@@ -45,22 +45,58 @@
           <input class="uk-checkbox" id="toggle-search" type="checkbox">
           <label for="toggle-search" class="settings-title">Search bar</label>
           <p class="settings-description">Whether to show search bar</p>
-        </div>
 
-        <div id="appearance-tab">
+          <hr>
+          
+          <h4>Date</h4>
+          <label for="toggle-date" class="settings-title">Date format</label>
+          <p class="settings-description">Choose date format</p>
+          <ul class="date-formats">
+            <li class="date-format date-format-default date-format-active" data-format="mmddyyyy">mm/dd/yyyy</li>
+            <li class="date-format date-format-1" data-format="ddmmyyyy">dd/mm/yyyy</li>
+            <li class="date-format date-format-2" data-format="string">Day dd, Month yyyy</li>
+          </ul>
+
+          <hr>
+
           <h4>Colors</h4>
           <label for="toggle-background" class="settings-title">Background</label>
           <p class="settings-description">Choose a background color</p>
           <div class="background-samples">
-            <div class="background-sample background-sample-1" data-background="#303030" data-color="#ededed">A</div>
-            <div class="background-sample background-sample-2" data-background="#ea907a" data-color="#160E0E">A</div>
-            <div class="background-sample background-sample-3" data-background="#fbc687" data-color="#51321F">A</div>
-            <div class="background-sample background-sample-4" data-background="#f4f7c5" data-color="#414D2D">A</div>
-            <div class="background-sample background-sample-5" data-background="#aacdbe" data-color="#233934">A</div>
-            <div class="background-sample background-sample-6" data-background="#654062" data-color="#EFE8F7">A</div>
-            <div class="background-sample background-sample-7" data-background="#ff9c71" data-color="#322106">A</div>
-            <div class="background-sample background-sample-8" data-background="#fbd46d" data-color="#4D3300">A</div>
+            <div class="background-sample background-default" data-background="#ffffff" data-color="#303030">A
+            </div>
+            <div class="background-sample background-sample-1" data-background="#303030" data-color="#ededed">
+              A</div>
+            <div class="background-sample background-sample-2" data-background="#ea907a" data-color="#160E0E">
+              A</div>
+            <div class="background-sample background-sample-3" data-background="#fbc687" data-color="#51321F">
+              A</div>
+            <div class="background-sample background-sample-4" data-background="#f4f7c5" data-color="#414D2D">
+              A</div>
+            <div class="background-sample background-sample-5" data-background="#aacdbe" data-color="#233934">
+              A</div>
+            <div class="background-sample background-sample-6" data-background="#654062" data-color="#EFE8F7">
+              A</div>
+            <div class="background-sample background-sample-7" data-background="#ff9c71" data-color="#322106">
+              A</div>
+            <div class="background-sample background-sample-8" data-background="#fbd46d" data-color="#4D3300">
+              A</div>
           </div>
+
+          <hr>
+            
+          <h4>Reset</h4>
+          <p id="reset"><span class="uk-icon-refresh" uk-icon="refresh"></span> Reset to default</p>
+        </div>
+
+        <div id="about-tab">
+          <h4 id="logo">Wecolme Tab</h4>
+          <p>Thank for supporting this project! ❤️</p>
+          <ul class="links">
+            <li><a href="www.andreawdev.com">Website</a></li>
+            <li><a href="https://www.instagram.com/andrea.wdev/">Instagram</a></li>
+            <li><a href="https://www.instagram.com/andrea.wdev/">GitHub</a></li>
+          </ul>
         </div>
       </div>
 
@@ -71,11 +107,12 @@
 
     <div>
       <h1 class="uk-heading-large" id="hours"></h1>
+      <h2 id="date"></h2>
     </div>
 
     <form class="uk-search uk-search-default uk-display-block" id="search-bar" method="GET" action="https://google.com/search">
       <span uk-search-icon></span>
-      <input class="uk-search-input" name="q" type="search" value="">
+      <input id="searchbar" class="uk-search-input" name="q" type="search" value="">
     </form>
 
   </div>
